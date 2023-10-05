@@ -1,0 +1,129 @@
+/* här finns css för välkomns sidan*/
+
+* {
+    font-family: 'Courier New', monospace;
+}
+body {
+    margin: 0em;
+}
+/* grid container */
+.container{
+    display:grid;
+    grid-template-areas:
+        'header'
+        'main-content'
+        'right-sidebar'
+        'footer';
+}
+
+/* general column padding */
+.container > * {
+    padding:1rem;
+}
+
+/* assign columns to grid areas */
+.container > .header {
+    grid-area:header;
+    background:#e1dede;
+    padding: 0;
+    
+    
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1em;
+    margin-left: 1em;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: #e1dede;
+    color: black;
+  }
+
+  .välkommen {
+    font-family: 'Courier New', monospace;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.välkommen > .text {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: animateCode 5s steps(40);
+    padding: 1em;
+    
+    
+}
+
+
+@keyframes animateCode {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .välkommen > .text {
+        white-space: normal;
+        overflow: auto;
+        animation: none; 
+    }
+}
+
+.main-container {
+    background-color: whitesmoke;
+    padding: 1em;
+    padding-left: 8em;
+    padding-right: 8em;
+
+}
+
+.container > .main-content {
+    grid-area:main-content;
+    background:whitesmoke;
+    font-size: 20px;
+    padding-left: 2em;
+   
+}
+.container > .right-sidebar {
+    grid-area:right-sidebar;
+    background-color: whitesmoke;
+  
+}
+
+
+
+.container > .footer {
+    grid-area:footer;
+    background:#e1dede;
+}
+
+/* tablet breakpoint */
+@media (min-width:768px) {
+    .container {
+        grid-template-columns:repeat(3, 1fr);
+        grid-template-areas:
+            'header header header'
+            'main-content main-content right-sidebar'
+            'footer footer footer';
+    }
+}
