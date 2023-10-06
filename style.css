@@ -4,8 +4,12 @@
     font-family: 'Courier New', monospace;
 }
 body {
-    margin: 0em;
+    background-color:whitesmoke ;
+    padding: 0;
+    margin: 0;
+
 }
+
 /* grid container */
 .container{
     display:grid;
@@ -14,11 +18,12 @@ body {
         'main-content'
         'right-sidebar'
         'footer';
+        justify-items: center;
 }
 
-/* general column padding */
 .container > * {
-    padding:1rem;
+    
+    
 }
 
 /* assign columns to grid areas */
@@ -30,46 +35,54 @@ body {
     
 }
 
-.navbar {
-    overflow: hidden;
-    background-color: #333;
+
+.menu {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 100vw;
-  }
-  
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
+    background-color: #333;
+    width: 100%;
     text-align: center;
-    padding: 1em;
-    margin-left: 1em;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 15px 20px;
+    color: #fff;
     text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .navbar a:hover {
-    background: #e1dede;
+    font-size: 28px;
+}
+
+.menu a:hover {
+    background-color: whitesmoke ;
     color: black;
-  }
+}
+
+
+@media screen and (max-width: 600px) {
+    .menu {
+        position: static;
+    }
+
+    .menu a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
 
   .välkommen {
     font-family: 'Courier New', monospace;
     font-size: 24px;
     white-space: nowrap;
     overflow: hidden;
-
 }
+
 
 .välkommen > .text {
     overflow: hidden;
     white-space: nowrap;
     animation: animateCode 5s steps(40);
-    padding: 1em;
-    
-    
+    padding: 2em; 
 }
 
 
@@ -92,8 +105,9 @@ body {
 .main-container {
     background-color: whitesmoke;
     padding: 1em;
-    padding-left: 8em;
-    padding-right: 8em;
+    padding-left: 4em;
+    padding-right: 4em;
+
 
 }
 
@@ -101,24 +115,49 @@ body {
     grid-area:main-content;
     background:whitesmoke;
     font-size: 20px;
-    padding-left: 2em;
+    padding:2em;
+    
    
 }
+
+.main-content-text {
+    max-width:600px ;
+    min-width: 380px;
+    
+}
+
+
+
 .container > .right-sidebar {
     grid-area:right-sidebar;
     background-color: whitesmoke;
+    padding: 1em;
+   
+    
   
 }
 
-
-
-.container > .footer {
-    grid-area:footer;
-    background:#e1dede;
+/* Grundstil för bilden */
+.container > .right-sidebar > img {
+    height: 350px;
+    width: 350px;
+    padding: 1em;
+    padding-right: 2em;
 }
 
+/* Mediafråga för att ändra bildens storlek när webbläsaren är större än 768px */
+@media (min-width: 768px) {
+    .container > .right-sidebar > img {
+        height: 450px;
+        width: 450px;
+    }
+}
+
+
+
+
 /* tablet breakpoint */
-@media (min-width:768px) {
+@media (min-width:956px) {
     .container {
         grid-template-columns:repeat(3, 1fr);
         grid-template-areas:
