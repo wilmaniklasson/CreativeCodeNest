@@ -1,0 +1,23 @@
+{
+  "name": "creativecodenest",
+  "version": "1.0.0",
+  "description": "kurs: HTML och CSS \"Min uppgift är att bygga en hemsida till konferensen \"Bättre webb\" Utbildning: Handelsakademin frontend developer Klass: FED23GB",
+  "main": "index.html",
+  "scripts": {
+  "deploy": "surge ."},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "surge": "^0.23.1"
+  }
+}
+
+
+domain: didactic-guide.surge.sh
+         upload: [] 100% eta: 0.0s (18 files, 39462123 bytes)
+            CDN: [====================] 100%
+     encryption: *.surge.sh, surge.sh (225 days)
+             IP: 138.197.235.123
+
+  
