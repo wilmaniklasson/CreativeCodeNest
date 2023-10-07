@@ -1,149 +1,151 @@
-/*css för index.html*/
-
+/* Grundstilar för mobila enheter */
 * {
     font-family: 'Courier New', monospace;
+    box-sizing: border-box;
 }
+
 body {
     background-color:whitesmoke ;
     padding: 0;
     margin: 0;
 
 }
-
-/* grid container */
-.grid-container{
-    display:grid;
+    
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* En kolumn som standard */
     grid-template-areas:
-        'header'
-        'main-content'
-        'right-sidebar';
-        justify-items: center;
+        "header"
+        "bättre-webb"
+        "right-content"
+        "left-content";
+    height: 100vh; /* Fyller hela skärmen vertikalt */
 }
 
-@media (min-width: 956px) {
-    .grid-container {
-        grid-template-columns: repeat(6, 1fr); 
-        grid-template-areas:
-            'header header header header header header' 
-            'main-content main-content main-content right-sidebar right-sidebar right-sidebar'; 
-    }
-}
-/*________________________*/
 .header {
-    grid-area:header;
-    background:#e1dede;
-    padding: 0;
+    grid-area: header;
+    background-color:#e1dede;
+    color: black;
+    padding: 20px;
+    text-align: center;
 }
-
-/*__________________________*/
 .nav-menu {
     position: fixed;
+    top: 0; right: 0; left: 0;
     background-color: #333;
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    padding: 10px;
 }
 
 .nav-menu a {
-    display: inline-block;
-    padding: 15px 20px;
+    box-sizing: border-box;
     color: #fff;
     text-decoration: none;
     font-size: 28px;
+    padding: 5px 5px;
+    
 }
 
-.nav-menu a:hover {
-    background-color: whitesmoke ;
+.welcome{
+    padding-top: 12em;
+}
+
+.bättre-webb{
+    grid-area: bättre-webb;
+    background-color: whitesmoke;
     color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.right-content {
+    grid-area: right-content;
+    background-color:whitesmoke;; 
+    color:black;
+    padding: 20px;
+    text-align: center;
+}
+
+.right-text{
+    font-size: 16;
+    
+}
+
+.right-text >p{
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.left-content{
+    grid-area: left-content;
+    background-color:whitesmoke;; 
+    color: black;
+    padding: 20px;
+    text-align: center;
 }
 
 
-@media screen and (max-width: 600px) {
-    .nav-menu {
-        position: static;
-    }
-
-    .nav-menu a {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-    }
-}
-
-/*_____________________________*/
-  .welcome {
-    font-family: 'Courier New', monospace;
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
+.left-content > img {
+    height: 300px;
+    width: 300px;
 }
 
 
-.welcome-text {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: animateCode 5s steps(40);
-    padding: 2em; 
-}
 
-/*Animering för welcome-text som får texten att skrivas in*/
-@keyframes animateCode {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .welcome-text {
-        white-space: normal;
-        overflow: auto;
-        animation: none; 
-    }
-}
-
-/*_____________________*/
-.content-container {
-    background-color: whitesmoke;
-    padding: 1em;
-    padding-left: 4em;
-    padding-right: 4em;
-}
-
-/*_________________________*/
-.main-section{
-    grid-area:main-content;
-    background:whitesmoke;
-    font-size: 20px;
-    padding:2em;
-}
-
-
-.section-text {
-    max-width:600px ;
-    min-width: 380px;
-}
-
-/*___________________*/
- .sidebar-section {
-    grid-area:right-sidebar;
-    background-color: whitesmoke;
-    padding: 1em;
-}
-
-/* Grundstil för bilden */
- .sidebar-section > img {
-    height: 350px;
-    width: 350px;
-    padding: 1em;
-    padding-right: 2em;
-}
-
+/* Mediafråga för tabletter (minst 768px bred) */
 @media (min-width: 768px) {
-    .sidebar-section> img {
-        height: 450px;
-        width: 450px;
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header header"
+            "bättre-webb bättre-webb"
+            "right-content left-content";
+    }
+    .nav-menu  {
+            flex-direction: row; 
+            justify-content: center; 
+        }
+    
+        .nav-menu a {
+            margin: 0 15px; 
+        }
+
+        .welcome{
+            padding-top: 5em;
+            font-size: 25px;
+        }
+        .right-text{
+            min-width: 400px; 
+            margin-left: 5em;
+           
+        }
+}
+
+
+
+
+
+/* Mediafråga för större skärmar (minst 1024px bred) */
+@media (min-width: 1024px) {
+    .left-content > img {
+        height: 400px;
+        width: 400px;
+        
+    }
+    .left-content > h3{
+        margin: 1em;
+        padding: 3em;
+       
+    }
+
+    .right-text{
+        max-width: 700px; 
+        margin-left: 5em;
+        font-size: 25px;
     }
 }
+
 
 
