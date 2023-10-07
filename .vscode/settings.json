@@ -23,4 +23,6 @@ encryption: *.surge.sh, surge.sh (225 days)
 Success! - Published to framtidens-webb.surge.sh
 
 
+surge --domain framtidens-webb.surge.sh
+
   
