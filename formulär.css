@@ -44,7 +44,7 @@ input[type="radio"]:checked + label + #meddelande {
 }
 
 .button-link1 {
-    background-color: #4CAF50; /
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -57,7 +57,7 @@ input[type="radio"]:checked + label + #meddelande {
     border-radius: 5px;
 }
 
-.button-link:hover {
+.button-link1:hover {
     background-color: #45a049; 
 }
 
@@ -76,11 +76,11 @@ input[type="radio"]:checked + label + #meddelande {
     border-radius: 5px;
 }
 
-.button-link:hover {
+.button-link2:hover {
     background-color: #e02918; 
 }
 
-.tillbaka {
+.tillbacka {
     background-color: gray;
     border: none;
     color: white;
@@ -94,6 +94,6 @@ input[type="radio"]:checked + label + #meddelande {
     border-radius: 5px;
 }
 
-.tillbaka:hover {
+.tillbacka:hover {
     background-color: rgb(89, 87, 87);
 }
