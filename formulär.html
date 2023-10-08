@@ -1,30 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bättre webb</title>
+    <title>formulär</title>
     <link rel="stylesheet" href="formulär.css">
-        <!-- formulär sidan:
--text: namn
--text: adress
--text: email
--chekbox: vilka dagar 
--radio: mat val
--text: alergier
- -->
-</head>
-<body>
-    <h1>"Hej och välkommen till vår anmälningssida för seminarierna!</h1>
-        <p>Vi är glada att du är intresserad av våra evenemang. För närvarande 
-            arbetar vi på att göra anmälningsprocessen så smidig som möjligt. 
-            Vi ber om lite tålamod medan vi slutför de sista detaljerna. Snart 
-            kommer du att kunna anmäla dig till våra spännande seminarium. 
-            Tack för ditt intresse och vänligen återkom vid ett senare tillfälle 
-            för att anmäla dig till våra kommande seminarier!"</p>
+ 
+	<header>
+		<h1> fyll i formuläret nedan för att anmälla dig  </h1>
+	</header>
+	<main>
+
+		<form>
+			<section class="form-section">
+                <label for="form-firstname">Förnamn:</label>
+                <input type="text" name="form-firstname" id="form-firstname" placeholder="Ange ditt förnamn här"
+                    required
+                    minlength="2"
+                    maxlength="18"
+                />
+            </section>
+            <section class="form-section">
+                <label for="form-lastname">Efternamn:</label>
+                <input type="text" name="form-lastname" id="form-lastname" placeholder="Ange ditt efternamn här"
+                    required
+                    minlength="2"
+                    maxlength="18"
+                />
+            </section>
             
-<footer>
-    &copy; 2023 Bättre Webb. Alla rättigheter förbehållna. (Denna webbsida är en skoluppgift och innehållet är inte verkligt.)
-</footer>
+            <section class="form-section">
+                <label for="form-epost">E-postadress:</label>
+                <input type="email" name="epost" id="epost" placeholder="Ange din e-postadress här" 
+                required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" /> <!-- Korrekt formulerad e-postadress krävs för att kunna skicka formuläret -->
+            </section>
+
+			<section class="form-section">
+				<div>
+                    <h4>20 oktober: "Framtidens Frontend-Teknologier"</h4>
+                    <input id="dag-1" type="checkbox" />
+                    <label for="dag-1"> Dag 1.</label>
+                </div><br>
+                
+                <div>
+                    <h4>21 oktober: "Optimerad Prestanda och Responsiv Design"</h4>
+                    <input id="dag-2" type="checkbox" />
+                    <label for="dag-2"> Dag 2.</label>
+                </div><br>
+                
+                <div>
+                    <h4>23 oktober: "Säkerhet, Användardata och Framtidstrender"</h4>
+                    <input id="dag-3" type="checkbox" />
+                    <label for="dag-3"> Dag 3.</label>
+                </div><br>
+            </section>
+
+
+            <section>
+                <p>Välj mat</p>
+                <div>
+                    <input id="kött" type="radio" name="mat-typ" />
+                    <label for="kött">kött</label>
+                </div><br>
+                <div>
+                    <input id="Veganskt" type="radio" name="mat-typ" />
+                    <label for="Veganskt">Veganskt</label>
+                </div><br>
+                <div>
+                    <input id="Ovrigt" type="radio" name="mat-typ" />
+                    <label for="Ovrigt">Annat (vänligen specificera i rutan nedan)"</label>
+                    <textarea name="meddelande" id="meddelande" cols="45" rows="5" placeholder="(Om du har några allergier eller speciella kostrestriktioner, vänligen skriv dem nedan.) "></textarea>
+                </div>
+            </section>
+            
+            <section class="form-section row">
+                <a href="form-bekräftelse.html" class="button-link1">Spara inställningar</a>
+                <button type="reset" class="button-link2">Återställ formulär</button>
+                
+                </section>
+               
+                
+		</form>
+	</main>
 </body>
 </html>
+
+
+   

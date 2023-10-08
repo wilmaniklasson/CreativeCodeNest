@@ -18,7 +18,8 @@ body {
         "header"
         "bättre-webb"
         "right-content"
-        "left-content";
+        "left-content"
+        "footer";
     height: 100vh; /* Fyller hela skärmen vertikalt */
 }
 
@@ -92,7 +93,10 @@ body {
     width: 300px;
 }
 
-
+footer{
+    grid-area: footer;  
+    padding: 2em;
+}
 
 /* Mediafråga för tabletter (minst 768px bred) */
 @media (min-width: 768px) {
@@ -101,7 +105,8 @@ body {
         grid-template-areas:
             "header header"
             "bättre-webb bättre-webb"
-            "right-content left-content";
+            "right-content left-content"
+            "footer footer";
     }
     .nav-menu  {
             flex-direction: row; 

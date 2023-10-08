@@ -1,18 +1,79 @@
-/* här kommer css finnas för formulär sidan*/
+* {
+	box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 20px;
+	color: #1a1a1a;
+	background-color: #eeeeee;
 }
 
-h1 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
+
+form {
+	border: 2px solid rgb(111, 33, 33);
+	margin: 0.5em 0;
+	padding: 0 1em;
 }
 
-p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+.form-section {
+	display: flex;
+	flex-direction: column;
+	margin: 1em 0;
+	
+}
+.form-section.row {
+	flex-direction: row;
+}
+
+input:valid {
+	border-right: 1em solid rgb(35, 130, 71);
+	
+}
+input:invalid {
+	border-right: 1em solid rgb(111, 33, 33);
+}
+
+
+#meddelande {
+    display: none; /* Gömmer meddelandefältet som standard */
+}
+
+input[type="radio"]:checked + label + #meddelande {
+    display: block; /* Visar meddelandefältet när ett radioalternativ är markerat */
+}
+
+.button-link1 {
+    background-color: #4CAF50; /
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-link:hover {
+    background-color: #45a049; 
+}
+
+
+.button-link2 {
+    background-color: #d34848; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-link:hover {
+    background-color: #e02918; 
 }
