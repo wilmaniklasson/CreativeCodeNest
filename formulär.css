@@ -4,7 +4,8 @@
 
 body {
 	color: #1a1a1a;
-	background-color: #eeeeee;
+	background-color: #f8f3fc;
+
 }
 
 
@@ -12,6 +13,7 @@ form {
 	border: 2px solid rgb(111, 33, 33);
 	margin: 0.5em 0;
 	padding: 0 1em;
+   
 }
 
 .form-section {
@@ -76,4 +78,22 @@ input[type="radio"]:checked + label + #meddelande {
 
 .button-link:hover {
     background-color: #e02918; 
+}
+
+.tillbacka {
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tillbacka:hover {
+    background-color: rgb(89, 87, 87);
 }

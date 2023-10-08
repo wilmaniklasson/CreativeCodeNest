@@ -10,7 +10,9 @@ body {
     margin: 0;
 
 }
-    
+  p {
+    line-height: 1.5;
+  }  
 .grid-container {
     display: grid;
     grid-template-columns: 1fr; /* En kolumn som standard */
@@ -55,33 +57,27 @@ body {
 
 .bättre-webb{
     grid-area: bättre-webb;
-    background-color: whitesmoke;
-    color: black;
-    padding: 20px;
-    text-align: center;
+   
 }
 
 .right-content {
     grid-area: right-content;
-    background-color:whitesmoke;; 
+    background-color: #a885af; 
     color:black;
     padding: 20px;
     text-align: center;
 }
 
 .right-text{
-    font-size: 16;
-    
-}
-
-.right-text >p{
-    line-height: 1.5;
-    font-size: 18px;
+    font-size: 16px;
+    background-color:whitesmoke;
+    border-radius: 5%;
+    padding: 1em;
 }
 
 .left-content{
     grid-area: left-content;
-    background-color:whitesmoke;
+    background-color:#a885af; 
     color: black;
     padding: 20px;
     text-align: center;
@@ -125,7 +121,7 @@ body {
         }
         .right-text{
             min-width: 400px; 
-            margin-left: 5em;
+            
            
         }
 }
