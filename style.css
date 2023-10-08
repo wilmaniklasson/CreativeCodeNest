@@ -19,7 +19,7 @@ body {
         "bättre-webb"
         "right-content"
         "left-content"
-        "footer";
+        ;
     height: 100vh; /* Fyller hela skärmen vertikalt */
 }
 
@@ -88,14 +88,16 @@ body {
 }
 
 
-.left-content > img {
+.left-content > .gif {
     height: 300px;
     width: 300px;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
-footer{
-    grid-area: footer;  
-    padding: 2em;
+.left-content > .image {
+    height: 280px;
+    width: 300px;
 }
 
 /* Mediafråga för tabletter (minst 768px bred) */
@@ -106,7 +108,7 @@ footer{
             "header header"
             "bättre-webb bättre-webb"
             "right-content left-content"
-            "footer footer";
+            ;
     }
     .nav-menu  {
             flex-direction: row; 
@@ -134,8 +136,13 @@ footer{
 
 /* Mediafråga för större skärmar (minst 1024px bred) */
 @media (min-width: 1024px) {
-    .left-content > img {
+    .left-content > .gif {
         height: 400px;
+        width: 400px;
+        
+    }
+    .left-content > .image{
+        height: 380px;
         width: 400px;
         
     }
