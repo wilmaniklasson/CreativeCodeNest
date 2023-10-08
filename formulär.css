@@ -80,7 +80,7 @@ input[type="radio"]:checked + label + #meddelande {
     background-color: #e02918; 
 }
 
-.tillbacka {
+.tillbaka {
     background-color: gray;
     border: none;
     color: white;
@@ -94,6 +94,6 @@ input[type="radio"]:checked + label + #meddelande {
     border-radius: 5px;
 }
 
-.tillbacka:hover {
+.tillbaka:hover {
     background-color: rgb(89, 87, 87);
 }
