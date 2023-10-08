@@ -137,13 +137,13 @@ body {
 /* Mediafråga för större skärmar (minst 1024px bred) */
 @media (min-width: 1024px) {
     .left-content > .gif {
-        height: 400px;
-        width: 400px;
+        height: 500px;
+        width: 500px;
         
     }
     .left-content > .image{
-        height: 380px;
-        width: 400px;
+        height: 480px;
+        width: 500px;
         
     }
     .left-content > h3{
