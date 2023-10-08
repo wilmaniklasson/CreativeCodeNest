@@ -27,7 +27,7 @@ p {
     margin: 10px 0;
 }
 
-.tillbacka {
+.tillbaka {
     background-color: gray;
     border: none;
     color: white;
@@ -41,24 +41,7 @@ p {
     border-radius: 5px;
 }
 
-.tillbacka:hover {
+.tillbaka:hover {
     background-color: rgb(89, 87, 87);
 }
 
-.tillbacka {
-    background-color: gray;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.tillbacka:hover {
-    background-color: rgb(89, 87, 87);
-}

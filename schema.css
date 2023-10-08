@@ -126,7 +126,7 @@ body {
 
 
 
-.tillbacka {
+.tillbaka {
     background-color: rgb(239, 175, 119);
     border: none;
     color: white;
@@ -140,7 +140,7 @@ body {
     border-radius: 5px;
 }
 
-.tillbacka:hover {
+.tillbaka:hover {
     background-color: rgb(249, 180, 68);
 }
 
