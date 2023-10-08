@@ -4,7 +4,7 @@
     font-family: 'Courier New', monospace;
 }
 body {
-    background-color:whitesmoke ;
+    background-color:#89cbf6;
     padding: 0;
     margin: 0;
 }
@@ -21,19 +21,19 @@ body {
          "left-row3"
         "footer";
     height: 100vh; /* Fyller hela skärmen vertikalt */
+    box-sizing: border-box;
 }
 
 .header {
     grid-area: header;
-    background-color: #3498db; /* Blå färg för header */
-    color: white;
+    background-color: #41abf2; 
     padding: 20px;
     text-align: center;
 }
 
 .right-row1 {
     grid-area: right-row1;
-    background-color: #14753c; /* Grön färg för main-content */
+    background-color: #e69474; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -41,14 +41,23 @@ body {
 
 .left-row1{
     grid-area: left-row1;
-    background-color: #0cee66; /* Röd färg för sidebar */
+    background-color: #e69474; 
     color: white;
     padding: 20px;
     text-align: center;
 }
+
+.mobil{
+    height:300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .right-row2{
     grid-area: right-row2;
-    background-color: #4b1087; /* Röd färg för sidebar */
+    background-color:#8b5abc; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -58,14 +67,22 @@ body {
         
 .left-row2{
     grid-area: left-row2;
-    background-color: #b094ec; /* Röd färg för sidebar */
+    background-color:#8b5abc; 
     color: white;
     padding: 20px;
     text-align: center;
 }
+
+.dator{
+    height:300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .right-row3{
     grid-area: right-row3;
-    background-color: #e82a6c; /* Röd färg för sidebar */
+    background-color: #ec98b5; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -73,15 +90,23 @@ body {
 }
 .left-row3{
     grid-area: left-row3;
-    background-color: #efa0d5; /* Röd färg för sidebar */
+    background-color: #ec98b5; 
     color: white;
     padding: 20px;
     text-align: center;
 
 }
+
+.mobil-kamera{
+    height:300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .footer{
     grid-area: footer;
-    background-color: #f39c12; /* Gul färg för footer */
+    background-color: #f39c12; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -101,18 +126,53 @@ body {
 
 
 
+.tillbacka {
+    background-color: rgb(239, 175, 119);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
+.tillbacka:hover {
+    background-color: rgb(249, 180, 68);
+}
 
 /* Mediafråga för större skärmar (minst 1024px bred) */
-@media (min-width: 1024px) {
-    .grid-container {
-       
+@media (min-width: 800px) {
+    .mobil{
+        height:380px;
+        width: 380px;
     }
+    .dator{
+        height:380px;
+        width: 380px;
+    }
+    .mobil-kamera{
+        height:380px;
+        width: 380px;
+    }
+
 }
 
 /* Mediafråga för stora skärmar (minst 1200px bred) */
 @media (min-width: 1200px) {
-    .grid-container {
-        
+    .mobil{
+        height:480px;
+        width: 480px;
+    }
+    .dator{
+        height:480px;
+        width: 480px;
+    }
+    .mobil-kamera{
+        height:480px;
+        width: 480px;
     }
 }
