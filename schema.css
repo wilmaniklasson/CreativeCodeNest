@@ -1,5 +1,5 @@
 /* här kommer css finnas för schema sidan*/
-/* Grundstilar för mobila enheter */
+
 * {
     font-family: 'Courier New', monospace;
     font-size: 18px;
@@ -15,17 +15,12 @@ body {
     grid-template-columns: 1fr; /* En kolumn som standard */
     grid-template-areas:
         "header"
-        "right-row1"
-        "left-row1"
-        "right-row2"
-        "left-row2"
-        "right-row3"
-        "left-row3"
+        "row1"
+        "row2"
+        "row3"
         "footer";
     height: 100vh; /* Fyller hela skärmen vertikalt */
     box-sizing: border-box;
-    justify-content: center; /* Centrera innehållet horisontellt */
-    align-items: center; /* Centrera innehållet vertikalt */
 }
 
 
@@ -36,158 +31,112 @@ body {
     text-align: center;
 }
 
-.right-row1 {
-    grid-area: right-row1;
+
+
+
+
+
+
+
+
+.row1 {
+    grid-area: row1;
     background-color: #e69474; 
     padding: 20px;
     text-align: center;
 }
 
-.left-row1{
-    grid-area: left-row1;
-    background-color: #e69474; 
-    padding: 20px;
-    text-align: center;
+.dag-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    grid-gap: 20px; 
+    max-width: 1000px;
+    margin: 0 auto;
 }
-.dag-1{
-    background-color: #e9c6b8;
+
+.seminarium-dag-1{
+    padding: 20px;
+    background-color: #f0f0f0;
     border-radius:  5% 5% 5% 5%;
-    padding: 1em;
-    max-width: 500px;
+    text-align: center;
 }
 
 .mobil{
-    height:300px;
-    width: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     
 }
 
-.right-row2{
-    grid-area: right-row2;
+
+
+
+
+
+
+
+.row2{
+    grid-area: row2;
     background-color:#8b5abc; 
     padding: 20px;
     text-align: center;
 }
-        
-.left-row2{
-    grid-area: left-row2;
-    background-color:#8b5abc; 
-    padding: 20px;
-    text-align: center;
+       
+.dag-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    grid-gap: 20px; 
+    max-width: 1000px;
+    margin: 0 auto; 
 }
-.dag-2{
-    background-color: #cdbdde; 
+
+.seminarium-dag-2{
+    padding: 20px;
+    background-color: #f0f0f0;
     border-radius:  5% 5% 5% 5%;
-    padding: 1em;
-    max-width: 500px;
+    text-align: center;
 }
 
 .dator{
-    height:300px;
-    width: 300px;
-    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.right-row3{
-    grid-area: right-row3;
+
+
+
+
+
+
+
+
+
+
+.row3{
+    grid-area: row3;
     background-color: #ec98b5; 
     padding: 20px;
     text-align: center;
 
 }
-.left-row3{
-    grid-area: left-row3;
-    background-color: #ec98b5; 
-    padding: 20px;
-    text-align: center;
-
+.dag-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    grid-gap: 20px; 
+    max-width: 1100px; 
+    margin: 0 auto; 
 }
-.dag-3{
-    background-color: #f1d2dd; 
+
+.seminarium-dag-3{
+    padding: 20px;
+    background-color: #f0f0f0;
     border-radius:  5% 5% 5% 5%;
-    padding: 1em;
-    max-width: 500px;
+    text-align: center;
 }
 
 .mobil-kamera{
-    height:300px;
-    width: 300px;
-    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.footer{
-    grid-area: footer;
-    background-color: #f39c12; 
-    padding: 20px;
-    text-align: center;
-}
-
-
-.tillbaka {
-    background-color: rgb(239, 175, 119);
-    border: none;
-    color: rgb(12, 12, 12);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 600;
-}
-
-.tillbaka:hover {
-    background-color: rgb(249, 180, 68);
-}
-
-
-/* Mediafråga för tabletter (minst 768px bred) */
-@media (min-width: 850px) {
-    .grid-container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "header header"
-            "right-row1 left-row1"
-            "right-row2 left-row2"
-            "right-row3 left-row3"
-            "footer footer";
-    }
-    *{
-        font-size: 15px; 
-        }
-        .mobil, .dator, .mobil-kamera {
-            height:350px;
-            width: 350px;
-            
-        }
-}
-
-@media (min-width: 800px) {
-        *{
-        font-size: 15px; 
-        }
-        .mobil, .dator, .mobil-kamera {
-            height:350px;
-            width: 350px;
-
-        }
-}
-
-
-
-/* Mediafråga för stora skärmar (minst 1200px bred) */
-@media (min-width: 1200px) {
-    .mobil, .dator, .mobil-kamera {
-        height:450;
-        width: 450;
-    }
-}
-
-
-/* Mediafråga för stora skärmar (minst 1200px bred) */
-@media (min-width: 1600px) {
-    .dag-1, .dag-2, .dag-3{
-        margin-left: 8em;
-        margin-top: 2em;
-        }
-}
+   
