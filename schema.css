@@ -2,6 +2,8 @@
 /* Grundstilar för mobila enheter */
 * {
     font-family: 'Courier New', monospace;
+    font-size: 18px;
+    line-height: 1.5em;
 }
 body {
     background-color:#89cbf6;
@@ -18,11 +20,14 @@ body {
         "right-row2"
         "left-row2"
         "right-row3"
-         "left-row3"
+        "left-row3"
         "footer";
     height: 100vh; /* Fyller hela skärmen vertikalt */
     box-sizing: border-box;
+    justify-content: center; /* Centrera innehållet horisontellt */
+    align-items: center; /* Centrera innehållet vertikalt */
 }
+
 
 .header {
     grid-area: header;
@@ -44,13 +49,17 @@ body {
     padding: 20px;
     text-align: center;
 }
+.dag-1{
+    background-color: #e9c6b8;
+    border-radius:  5% 5% 5% 5%;
+    padding: 1em;
+    max-width: 500px;
+}
 
 .mobil{
     height:300px;
     width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .right-row2{
@@ -58,8 +67,6 @@ body {
     background-color:#8b5abc; 
     padding: 20px;
     text-align: center;
-    
-
 }
         
 .left-row2{
@@ -68,13 +75,17 @@ body {
     padding: 20px;
     text-align: center;
 }
+.dag-2{
+    background-color: #cdbdde; 
+    border-radius:  5% 5% 5% 5%;
+    padding: 1em;
+    max-width: 500px;
+}
 
 .dator{
     height:300px;
     width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 .right-row3{
     grid-area: right-row3;
@@ -90,13 +101,17 @@ body {
     text-align: center;
 
 }
+.dag-3{
+    background-color: #f1d2dd; 
+    border-radius:  5% 5% 5% 5%;
+    padding: 1em;
+    max-width: 500px;
+}
 
 .mobil-kamera{
     height:300px;
     width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 .footer{
     grid-area: footer;
@@ -104,19 +119,6 @@ body {
     padding: 20px;
     text-align: center;
 }
-/* Mediafråga för tabletter (minst 768px bred) */
-@media (min-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "header header"
-            "right-row1 left-row1"
-            "right-row2 left-row2"
-            "right-row3 left-row3"
-            "footer footer";
-    }
-}
-
 
 
 .tillbaka {
@@ -138,35 +140,54 @@ body {
     background-color: rgb(249, 180, 68);
 }
 
-/* Mediafråga för större skärmar (minst 1024px bred) */
-@media (min-width: 800px) {
-    .mobil{
-        height:380px;
-        width: 380px;
-    }
-    .dator{
-        height:380px;
-        width: 380px;
-    }
-    .mobil-kamera{
-        height:380px;
-        width: 380px;
-    }
 
+/* Mediafråga för tabletter (minst 768px bred) */
+@media (min-width: 850px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header header"
+            "right-row1 left-row1"
+            "right-row2 left-row2"
+            "right-row3 left-row3"
+            "footer footer";
+    }
+    *{
+        font-size: 15px; 
+        }
+        .mobil, .dator, .mobil-kamera {
+            height:350px;
+            width: 350px;
+            
+        }
 }
+
+@media (min-width: 800px) {
+        *{
+        font-size: 15px; 
+        }
+        .mobil, .dator, .mobil-kamera {
+            height:350px;
+            width: 350px;
+
+        }
+}
+
+
 
 /* Mediafråga för stora skärmar (minst 1200px bred) */
 @media (min-width: 1200px) {
-    .mobil{
-        height:480px;
-        width: 480px;
+    .mobil, .dator, .mobil-kamera {
+        height:450;
+        width: 450;
     }
-    .dator{
-        height:480px;
-        width: 480px;
-    }
-    .mobil-kamera{
-        height:480px;
-        width: 480px;
-    }
+}
+
+
+/* Mediafråga för stora skärmar (minst 1200px bred) */
+@media (min-width: 1600px) {
+    .dag-1, .dag-2, .dag-3{
+        margin-left: 8em;
+        margin-top: 2em;
+        }
 }

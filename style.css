@@ -70,7 +70,7 @@ body {
 
 .right-text{
     font-size: 16px;
-    background-color:whitesmoke;
+    background-color:#d2c5d4; 
     border-radius: 5%;
     padding: 1em;
 }
@@ -151,6 +151,6 @@ body {
     .right-text{
         max-width: 700px; 
         margin-left: 5em;
-        font-size: 25px;
+        font-size: 18px;
     }
 }
