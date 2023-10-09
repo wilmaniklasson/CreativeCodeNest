@@ -1,97 +1,56 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-	color: #1a1a1a;
-	background-color: #f8f3fc;
-
+    color: #1a1a1a;
+    background-color: #f8f3fc;
+    margin: 0; /* Lägg till margin: 0; för att ta bort kroppsens inbyggda marginaler */
+    font-family: Arial, sans-serif; /* Lägg till en generell typsnittsfamilj för bättre korskompatibilitet */
 }
 
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
 
 form {
-	border: 2px solid rgb(111, 33, 33);
-	margin: 0.5em 0;
-	padding: 0 1em;
-   
+    border: 2px solid rgb(111, 33, 33);
+    margin: 0.5em 0;
+    padding: 0 1em;
 }
 
 .form-section {
-	display: flex;
-	flex-direction: column;
-	margin: 1em 0;
-	
+    margin: 1em 0;
 }
+
 .form-section.row {
-	flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Lägg till för att centrera element i raden */
 }
 
 input:valid {
-	border-right: 1em solid rgb(35, 130, 71);
-	
-}
-input:invalid {
-	border-right: 1em solid rgb(111, 33, 33);
+    border-right: 1em solid rgb(35, 130, 71);
 }
 
+input:invalid {
+    border-right: 1em solid rgb(111, 33, 33);
+}
 
 #meddelande {
-    display: none; /* Gömmer meddelandefältet som standard */
+    display: none;
 }
 
-input[type="radio"]:checked + label + #meddelande {
-    display: block; /* Visar meddelandefältet när ett radioalternativ är markerat */
-}
-
-.button-link1 {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.button-link1:hover {
-    background-color: #45a049; 
-}
-
-
-.button-link2 {
-    background-color: #d34848; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.button-link2:hover {
-    background-color: #e02918; 
+input[type="radio"]:checked+label+#meddelande {
+    display: block;
 }
 
 .tillbaka {
     background-color: gray;
-    border: none;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
 }
 
 .tillbaka:hover {

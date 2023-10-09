@@ -1,63 +1,52 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulär</title>
+    <title>Formulär</title>
     <link rel="stylesheet" href="formulär.css">
- 
-	<header>
-		<h1> Fyll i formuläret nedan för att anmälla dig</h1>
-        <a href="index.html" class="tillbaka">Tillbaka till Bättre Webb 2023</a>
-	</header>
-	<main>
-        
+</head>
 
-		<form>
-			<section class="form-section">
+<body>
+    <header>
+        <div>
+            <h1>Fyll i formuläret nedan för att anmälla dig</h1>
+            <a href="index.html" class="tillbaka">Tillbaka till Bättre Webb 2023</a>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <section class="form-section">
                 <label for="form-firstname">Förnamn:</label>
-                <input type="text" name="form-firstname" id="form-firstname" placeholder="Ange ditt förnamn här"
-                    required
-                    minlength="2"
-                    maxlength="18"
-                />
+                <input type="text" name="form-firstname" id="form-firstname" placeholder="Ange ditt förnamn här" required minlength="2" maxlength="18" />
             </section>
             <section class="form-section">
                 <label for="form-lastname">Efternamn:</label>
-                <input type="text" name="form-lastname" id="form-lastname" placeholder="Ange ditt efternamn här"
-                    required
-                    minlength="2"
-                    maxlength="18"
-                />
+                <input type="text" name="form-lastname" id="form-lastname" placeholder="Ange ditt efternamn här" required minlength="2" maxlength="18" />
             </section>
-            
             <section class="form-section">
                 <label for="form-epost">E-postadress:</label>
-                <input type="email" name="epost" id="epost" placeholder="Ange din e-postadress här" 
-                required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" /> <!-- Korrekt formulerad e-postadress krävs för att kunna skicka formuläret -->
+                <input type="email" name="epost" id="form-epost" placeholder="Ange din e-postadress här" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
             </section>
-
-			<section class="form-section">
-				<div>
+            <section class="form-section">
+                <div>
                     <h4>20 oktober: "Framtidens Frontend-Teknologier"</h4>
                     <input id="dag-1" type="checkbox" />
                     <label for="dag-1"> Dag 1.</label>
                 </div><br>
-                
                 <div>
                     <h4>21 oktober: "Optimerad Prestanda och Responsiv Design"</h4>
                     <input id="dag-2" type="checkbox" />
                     <label for="dag-2"> Dag 2.</label>
                 </div><br>
-                
                 <div>
                     <h4>23 oktober: "Säkerhet, Användardata och Framtidstrender"</h4>
                     <input id="dag-3" type="checkbox" />
                     <label for="dag-3"> Dag 3.</label>
                 </div><br>
             </section>
-
-
             <section>
                 <p>Välj mat</p>
                 <div>
@@ -74,18 +63,16 @@
                     <textarea name="meddelande" id="meddelande" cols="45" rows="5" placeholder="(Om du har några allergier eller speciella kostrestriktioner, vänligen skriv dem nedan.) "></textarea>
                 </div>
             </section>
-            
-            <section class="form-section row">
-                <a href="form-bekräftelse.html" class="button-link1">Spara inställningar</a>
-                <button type="reset" class="button-link2">Återställ formulär</button>
-                
+                <section class="form-section row">
+                    <input type="submit" value="Spara inställningar">
+                    <button type="reset">Återställ formulär</button>
                 </section>
-               
-             
-		</form>
-	</main>
+        </form>
+    </main>
 </body>
+
 </html>
+
 
 
    
