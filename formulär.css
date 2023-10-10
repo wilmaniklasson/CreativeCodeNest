@@ -10,10 +10,18 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #bbadea;
     padding: 1em 0;
     text-align: center;
+}
+.nav a{
+    box-sizing: border-box;
+    color:black;
+    background-color: rgb(217, 211, 211);
+    border: 3px solid gray;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px 5px;
 }
 
 form {

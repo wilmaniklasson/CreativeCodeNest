@@ -10,14 +10,16 @@
 
 <body>
     <header>
-        <div>
-            <h1>Fyll i formuläret nedan för att anmälla dig</h1>
-            <a href="index.html" class="tillbaka">Tillbaka till Bättre Webb 2023</a>
+        <div class="nav">
+            <a href="index.html">Om bättre webb</a>
+            <a href="schema.html">Seminarium</a>
+            <a href="formulär.html">Anmälningssida</a>
         </div>
+        <h1>Fyll i formuläret nedan för att anmälla dig</h1>
     </header>
 
     <main>
-        <form>
+        <form action="form-bekräftelse.html" method="post">
             <section class="form-section">
                 <label for="form-firstname">Förnamn:</label>
                 <input type="text" name="form-firstname" id="form-firstname" placeholder="Ange ditt förnamn här" required minlength="2" maxlength="18" />

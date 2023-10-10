@@ -1,28 +1,60 @@
 /* här kommer css finnas för schema sidan*/
 
-* {
-    font-family: 'Courier New', monospace;
-    font-size: 18px;
-    line-height: 1.5em;
-}
+
 body {
     background-color:#89cbf6;
     padding: 0;
     margin: 0;
+}
+* {
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    line-height: 1.5em;
+    box-sizing: border-box;
 }
 .grid-container {
     display: grid;
     grid-template-columns: 1fr; /* En kolumn som standard */
     grid-template-areas:
         "header"
+        "dag-1"
         "row1"
+        "dag-2"
         "row2"
+        "dag-3"
         "row3"
         "footer";
     height: 100vh; /* Fyller hela skärmen vertikalt */
-    box-sizing: border-box;
+    
 }
 
+.dag-1 > h1{
+    font-size: 20px;
+
+}
+.dag-2> h1{
+    font-size: 20px;
+}
+
+.dag-3 > h1{
+    font-size: 20px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .dag-1 > h1{
+        font-size: 28px;
+    
+    }
+    .dag-2> h1{
+        font-size: 28px;
+    }
+    
+    .dag-3 > h1{
+        font-size: 28px;
+    }
+}
 
 .header {
     grid-area: header;
@@ -31,27 +63,37 @@ body {
     text-align: center;
 }
 
+.header a{
+    box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px 5px;
+}
+
+.dag-1, .dag-2, .dag-3 {
+    text-align: center;
+    
+}
+
+.row1, .row2, .row3{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    padding: 20px;
+    grid-gap: 20px;
+}
 
 
+/*___________________________________*/
 
 
-
-
-
-
+.dag-1{
+    grid-area:dag-1;
+    background-color: #e69474;
+}
 .row1 {
     grid-area: row1;
     background-color: #e69474; 
-    padding: 20px;
-    text-align: center;
-}
-
-.dag-1 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    grid-gap: 20px; 
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .seminarium-dag-1{
@@ -59,6 +101,7 @@ body {
     background-color: #f0f0f0;
     border-radius:  5% 5% 5% 5%;
     text-align: center;
+   
 }
 
 .mobil{
@@ -70,24 +113,14 @@ body {
 
 
 
-
-
-
-
-
+/*___________________________________*/
+.dag-2{
+    grid-area:dag-2;
+    background-color: #8b5abc; 
+}
 .row2{
     grid-area: row2;
     background-color:#8b5abc; 
-    padding: 20px;
-    text-align: center;
-}
-       
-.dag-2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    grid-gap: 20px; 
-    max-width: 1000px;
-    margin: 0 auto; 
 }
 
 .seminarium-dag-2{
@@ -97,7 +130,7 @@ body {
     text-align: center;
 }
 
-.dator{
+.dator, .vr{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -108,23 +141,15 @@ body {
 
 
 
+/*___________________________________*/
 
-
-
-
+.dag-3{
+    grid-area:dag-3;
+    background-color: #ec98b5;
+}
 .row3{
     grid-area: row3;
     background-color: #ec98b5; 
-    padding: 20px;
-    text-align: center;
-
-}
-.dag-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    grid-gap: 20px; 
-    max-width: 1100px; 
-    margin: 0 auto; 
 }
 
 .seminarium-dag-3{
