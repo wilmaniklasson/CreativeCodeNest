@@ -6,28 +6,34 @@
 
 body {
     color: #1a1a1a;
-    background-color: #f8f3fc;
-    margin: 0; /* Lägg till margin: 0; för att ta bort kroppsens inbyggda marginaler */
-    font-family: Arial, sans-serif; /* Lägg till en generell typsnittsfamilj för bättre korskompatibilitet */
+    background-color: whitesmoke;
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+}
+header > h1{
+    font-size: 30px;
+
 }
 
 header {
-    background-color: #bbadea;
+    background-color: #b0d9f5; 
     padding: 1em 0;
     text-align: center;
 }
-.nav a{
+.nav-menu a{
     box-sizing: border-box;
-    color:black;
-    background-color: rgb(217, 211, 211);
-    border: 3px solid gray;
+    color: #fff;
+    background-color: #41abf2; ;
+    border-radius: 5%;
     text-decoration: none;
     font-size: 25px;
     padding: 5px 5px;
 }
+.nav-menu a:hover{
+    background-color: #1369a2;
+}
 
 form {
-    border: 2px solid rgb(111, 33, 33);
     margin: 0.5em 0;
     padding: 0 1em;
 }

@@ -35,7 +35,7 @@ body {
 .nav-menu {
     position: fixed;
     top: 0; right: 0; left: 0;
-    background-color: #41abf2; 
+    background-color: #b0d9f5; 
     width: 100%;
     display: flex;
     flex-direction: column; 
@@ -45,10 +45,16 @@ body {
 .nav-menu a {
     box-sizing: border-box;
     color: #fff;
+    background-color: #41abf2; ;
+    border-radius: 5%;
     text-decoration: none;
     font-size: 25px;
     padding: 5px 5px;
     
+}
+
+.nav-menu a:hover{
+    background-color: #1369a2;
 }
 
 .welcome{

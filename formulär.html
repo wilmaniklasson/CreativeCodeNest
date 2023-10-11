@@ -10,39 +10,39 @@
 
 <body>
     <header>
-        <div class="nav">
+        <h1>Anmälningssida</h1>
+        <div class="nav-menu">
             <a href="index.html">Om bättre webb</a>
             <a href="schema.html">Seminarium</a>
-            <a href="formulär.html">Anmälningssida</a>
         </div>
-        <h1>Fyll i formuläret nedan för att anmälla dig</h1>
+        
     </header>
 
     <main>
         <form action="form-bekräftelse.html" method="post">
             <section class="form-section">
                 <label for="form-firstname">Förnamn:</label>
-                <input type="text" name="form-firstname" id="form-firstname" placeholder="Ange ditt förnamn här" required minlength="2" maxlength="18" />
+                <input type="text" name="form-firstname" id="form-firstname" placeholder="förnamn" required minlength="2" maxlength="18" />
             </section>
             <section class="form-section">
                 <label for="form-lastname">Efternamn:</label>
-                <input type="text" name="form-lastname" id="form-lastname" placeholder="Ange ditt efternamn här" required minlength="2" maxlength="18" />
+                <input type="text" name="form-lastname" id="form-lastname" placeholder="efternamn" required minlength="2" maxlength="18" />
             </section>
             <section class="form-section">
                 <label for="form-epost">E-postadress:</label>
-                <input type="email" name="epost" id="form-epost" placeholder="Ange din e-postadress här" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                <input type="email" name="epost" id="form-epost" placeholder="e-postadress" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
             </section>
             <section class="form-section">
                 <div>
                     <h4>20 oktober: "Framtidens Frontend-Teknologier"</h4>
                     <input id="dag-1" type="checkbox" />
                     <label for="dag-1"> Dag 1.</label>
-                </div><br>
+                </div>
                 <div>
                     <h4>21 oktober: "Optimerad Prestanda och Responsiv Design"</h4>
                     <input id="dag-2" type="checkbox" />
                     <label for="dag-2"> Dag 2.</label>
-                </div><br>
+                </div>
                 <div>
                     <h4>23 oktober: "Säkerhet, Användardata och Framtidstrender"</h4>
                     <input id="dag-3" type="checkbox" />
@@ -50,7 +50,7 @@
                 </div><br>
             </section>
             <section>
-                <p>Välj mat</p>
+                <h1>Välj mat</h1>
                 <div>
                     <input id="kött" type="radio" name="mat-typ" />
                     <label for="kött">kött</label>
@@ -60,8 +60,8 @@
                     <label for="Veganskt">Veganskt</label>
                 </div><br>
                 <div>
-                    <input id="Ovrigt" type="radio" name="mat-typ" />
-                    <label for="Ovrigt">Annat (vänligen specificera i rutan nedan)"</label>
+                    <input id="Övrigt" type="radio" name="mat-typ" />
+                    <label for="Övrigt">allergi (vänligen specificera i rutan nedan)</label>
                     <textarea name="meddelande" id="meddelande" cols="45" rows="5" placeholder="(Om du har några allergier eller speciella kostrestriktioner, vänligen skriv dem nedan.) "></textarea>
                 </div>
             </section>
