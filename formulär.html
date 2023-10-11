@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulär</title>
+    <title>Anmälningssida</title>
     <link rel="stylesheet" href="formulär.css">
 </head>
 
@@ -15,66 +15,67 @@
             <a href="index.html">Om bättre webb</a>
             <a href="schema.html">Seminarium</a>
         </div>
-        
     </header>
 
     <main>
-        <form action="form-bekräftelse.html" method="post">
+        <form>
             <section class="form-section">
                 <label for="form-firstname">Förnamn:</label>
-                <input type="text" name="form-firstname" id="form-firstname" placeholder="förnamn" required minlength="2" maxlength="18" />
+                <input type="text" name="form-firstname" id="form-firstname" placeholder="Förnamn" required minlength="2" maxlength="18" />
             </section>
             <section class="form-section">
                 <label for="form-lastname">Efternamn:</label>
-                <input type="text" name="form-lastname" id="form-lastname" placeholder="efternamn" required minlength="2" maxlength="18" />
+                <input type="text" name="form-lastname" id="form-lastname" placeholder="Efternamn" required minlength="2" maxlength="18" />
             </section>
             <section class="form-section">
                 <label for="form-epost">E-postadress:</label>
-                <input type="email" name="epost" id="form-epost" placeholder="e-postadress" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                <input type="email" name="form-epost" id="form-epost" placeholder="E-postadress" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
             </section>
             <section class="form-section">
+                <h2>Välj seminariedagar:</h2>
                 <div>
-                    <h4>20 oktober: "Framtidens Frontend-Teknologier"</h4>
+                    <p>20 oktober</p>
                     <input id="dag-1" type="checkbox" />
-                    <label for="dag-1"> Dag 1.</label>
+                    <label for="dag-1">"Framtidens Frontend-Teknologier"</label>
                 </div>
                 <div>
-                    <h4>21 oktober: "Optimerad Prestanda och Responsiv Design"</h4>
+                    <p>21 oktober</p>
                     <input id="dag-2" type="checkbox" />
-                    <label for="dag-2"> Dag 2.</label>
+                    <label for="dag-2">"Optimerad Prestanda och Responsiv Design"</label>
                 </div>
                 <div>
-                    <h4>23 oktober: "Säkerhet, Användardata och Framtidstrender"</h4>
+                    <p>23 oktober</p>
                     <input id="dag-3" type="checkbox" />
-                    <label for="dag-3"> Dag 3.</label>
-                </div><br>
+                    <label for="dag-3">"Säkerhet, Användardata och Framtidstrender" </label>
+                </div>
             </section>
-            <section>
-                <h1>Välj mat</h1>
+            <section class="form-section">
+                <h2>Välj mat:</h2>
                 <div>
                     <input id="kött" type="radio" name="mat-typ" />
-                    <label for="kött">kött</label>
-                </div><br>
+                    <label for="kött">Kött</label>
+                </div>
                 <div>
                     <input id="Veganskt" type="radio" name="mat-typ" />
                     <label for="Veganskt">Veganskt</label>
-                </div><br>
+                </div>
                 <div>
                     <input id="Övrigt" type="radio" name="mat-typ" />
-                    <label for="Övrigt">allergi (vänligen specificera i rutan nedan)</label>
-                    <textarea name="meddelande" id="meddelande" cols="45" rows="5" placeholder="(Om du har några allergier eller speciella kostrestriktioner, vänligen skriv dem nedan.) "></textarea>
+                    <label for="Övrigt">Allergi (vänligen specificera i rutan nedan)</label>
+                    <textarea name="meddelande" id="meddelande" cols="45" rows="5"
+                        placeholder="(Har några allergier eller speciella kostrestriktioner.) "></textarea>
                 </div>
             </section>
-                <section class="form-section row">
-                    <input type="submit" value="Spara inställningar">
-                    <button type="reset">Återställ formulär</button>
-                </section>
+            <section class="form-section row">
+                <input type="submit" value="Spara inställningar">
+                <button type="reset">Återställ formulär</button>
+            </section>
         </form>
     </main>
+
+    <footer>
+
+    </footer>
 </body>
 
 </html>
-
-
-
-   

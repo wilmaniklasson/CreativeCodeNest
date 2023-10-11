@@ -1,27 +1,21 @@
-* {
-    font-family: monospace;
-    font-size: 18px;
-    box-sizing: border-box;
-}
 
 body {
-    color: #1a1a1a;
-    background-color: whitesmoke;
-    margin: 0; 
+    display: grid;
+    grid-template-areas:
+            "header header header"
+            "left main right";
+    grid-template-columns:1fr auto 1fr;
+    grid-template-rows: 10em 100vh 5em;
     font-family: Arial, sans-serif; 
-}
-header > h1{
-    font-size: 30px;
-
 }
 
 header {
+    grid-area: header;
     background-color: #b0d9f5; 
     padding: 1em 0;
     text-align: center;
 }
 .nav-menu a{
-    box-sizing: border-box;
     color: #fff;
     background-color: #41abf2; ;
     border-radius: 5%;
@@ -33,42 +27,63 @@ header {
     background-color: #1369a2;
 }
 
-form {
-    margin: 0.5em 0;
-    padding: 0 1em;
+
+aside.left {
+    grid-area: left;
+    background-color: rgb(230, 227, 227);
+
 }
 
-.form-section {
-    margin: 1em 0;
+aside.right {
+    grid-area: right;
+    background-color: rgb(230, 227, 227);
 }
 
-.form-section.row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Lägg till för att centrera element i raden */
+main {
+    grid-area: main;
 }
 
-input:valid {
-    border-right: 1em solid rgb(35, 130, 71);
-}
+      .form-section {
+        margin-bottom: 20px;
+        padding: 10px;
+    }
 
-input:invalid {
-    border-right: 1em solid rgb(111, 33, 33);
-}
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
 
-#meddelande {
-    display: none;
-}
+    input[type="checkbox"],
+    input[type="radio"] {
+        margin-right: 10px;
+    }
 
-input[type="radio"]:checked+label+#meddelande {
-    display: block;
-}
+    input[type="submit"],
+    button[type="reset"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-.tillbaka {
-    background-color: gray;
-    color: white;
-}
+    input[type="submit"]:hover,
+    button[type="reset"]:hover {
+        background-color: #45a049;
+    }
 
-.tillbaka:hover {
-    background-color: rgb(89, 87, 87);
-}
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
