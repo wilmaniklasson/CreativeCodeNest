@@ -62,22 +62,24 @@ body {
 
 .header {
     grid-area: header;
-    background-color: #b0d9f5; 
+    background-color: #d4e9f7; 
     padding: 20px;
     text-align: center;
 }
 
+
+
 .header a{
     box-sizing: border-box;
-    color: #fff;
-    background-color: #41abf2; ;
-    border-radius: 5%;
+    color: black;
+    background-color: whitesmoke;
     text-decoration: none;
+    border-radius: 5%;
     font-size: 25px;
     padding: 5px 5px;
 }
 .header a:hover{
-    background-color: #1369a2;
+    background-color: rgb(222, 218, 218);
 }
 
 
