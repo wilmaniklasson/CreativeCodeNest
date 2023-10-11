@@ -12,9 +12,10 @@ body {
     line-height: 1.5em;
     box-sizing: border-box;
 }
+
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr; /* En kolumn som standard */
+    grid-template-columns: 1fr; 
     grid-template-areas:
         "header"
         "dag-1"
@@ -24,8 +25,7 @@ body {
         "dag-3"
         "row3"
         "footer";
-    height: 100vh; /* Fyller hela skärmen vertikalt */
-    
+    min-height: 100vh; 
 }
 
 .dag-1 > h1{
@@ -76,11 +76,33 @@ body {
     
 }
 
-.row1, .row2, .row3{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+
+  .row1, .row2, .row3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.seminarium-dag-1, .seminarium-dag-2, .seminarium-dag-3 {
+    width: 300px; /* Bredden på varje seminariumscontainer */
     padding: 20px;
-    grid-gap: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5%;
+    text-align: center;
+    margin: 10px; /* Mellanrum mellan seminariumscontainers */
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .row1, .row2, .row3 {
+        flex-direction: column;
+    }
+
+    .seminarium-dag-1, .seminarium-dag-2, .seminarium-dag-3 {
+        width: calc(100% - 40px); /* Bredden är 100% - 40px av respektive "row" */
+    }
 }
 
 
@@ -96,13 +118,7 @@ body {
     background-color: #e69474; 
 }
 
-.seminarium-dag-1{
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius:  5% 5% 5% 5%;
-    text-align: center;
-   
-}
+  
 
 .mobil{
     width: 100%;
@@ -123,12 +139,7 @@ body {
     background-color:#8b5abc; 
 }
 
-.seminarium-dag-2{
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius:  5% 5% 5% 5%;
-    text-align: center;
-}
+
 
 .dator, .vr{
     width: 100%;
@@ -152,12 +163,7 @@ body {
     background-color: #ec98b5; 
 }
 
-.seminarium-dag-3{
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius:  5% 5% 5% 5%;
-    text-align: center;
-}
+
 
 .mobil-kamera{
     width: 100%;

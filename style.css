@@ -15,14 +15,14 @@ body {
   }  
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr; /* En kolumn som standard */
+    grid-template-columns: 1fr; 
     grid-template-areas:
         "header"
         "bättre-webb"
         "right-content"
-        "left-content"
-        ;
-    height: 100vh; /* Fyller hela skärmen vertikalt */
+        "left-content";
+    height: 100vh; 
+
 }
 
 .header {
