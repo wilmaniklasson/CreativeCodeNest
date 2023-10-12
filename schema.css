@@ -1,18 +1,19 @@
-/* här kommer css finnas för schema sidan*/
-
-
 body {
-    background-color:#89cbf6;
     padding: 0;
     margin: 0;
 }
 * {
     font-family: monospace;
-    font-size: 18px;
     line-height: 1.5em;
     box-sizing: border-box;
 }
 
+h1{
+    font-size: 20px;
+}
+p {
+    font-size: 16px;
+}
 .grid-container {
     display: grid;
     grid-template-columns: 1fr; 
@@ -28,83 +29,22 @@ body {
     min-height: 100vh; 
 }
 
-.header > h1{
-    font-size: 30px;
-}
+/*_____GEMENSMMA STILAR____________*/
 
-.dag-1 > h1{
-    font-size: 20px;
-
-}
-.dag-2> h1{
-    font-size: 20px;
-}
-
-.dag-3 > h1{
-    font-size: 20px;
-}
-
-
-
-@media screen and (min-width: 768px) {
-    .dag-1 > h1{
-        font-size: 28px;
-    
-    }
-    .dag-2> h1{
-        font-size: 28px;
-    }
-    
-    .dag-3 > h1{
-        font-size: 28px;
-    }
-}
-
-.header {
-    grid-area: header;
-    background-color: #d4e9f7; 
-    padding: 20px;
-    text-align: center;
-}
-
-
-
-.header a{
-    box-sizing: border-box;
-    color: black;
-    background-color: whitesmoke;
-    text-decoration: none;
-    border-radius: 5%;
-    font-size: 25px;
-    padding: 5px 5px;
-}
-.header a:hover{
-    background-color: rgb(222, 218, 218);
-}
-
-
-.dag-1, .dag-2, .dag-3 {
-    text-align: center;
-    
-}
-
-
-  .row1, .row2, .row3 {
+.row1, .row2, .row3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .seminarium-dag-1, .seminarium-dag-2, .seminarium-dag-3 {
-    width: 300px; /* Bredden på varje seminariumscontainer */
+    width: 300px; 
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 5%;
     text-align: center;
-    margin: 10px; /* Mellanrum mellan seminariumscontainers */
+    margin: 10px; 
 }
-
-
 
 
 @media screen and (max-width: 768px) {
@@ -113,24 +53,68 @@ body {
     }
 
     .seminarium-dag-1, .seminarium-dag-2, .seminarium-dag-3 {
-        width: calc(100% - 40px); /* Bredden är 100% - 40px av respektive "row" */
+        width: calc(100% - 40px);
     }
 }
 
+@media screen and (mix-width: 768px) {
+    .dag-1, .dag-2, .dag-3{
+        
+    }
+}
 
-/*___________________________________*/
+/*_____HEADER_______________*/
+.header {
+    grid-area: header;
+    background-color: #d4e9f7; 
+    padding: 20px;
+    text-align: center;
+}
+
+/*________NAV MENY______________*/
+
+.nav-menu {
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    background-color: #d4e9f7; 
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    padding: 10px;
+    justify-content: center;
+}
+
+.nav-menu a {
+    box-sizing: border-box;
+    color: black;
+    background-color: whitesmoke;
+    text-decoration: none;
+    border-radius: 5%;
+    font-size: 25px;
+    padding: 5px 5px;
+    margin: 0.3em;   
+}
+
+.nav-menu a:hover {
+    text-decoration: underline rgb(141, 141, 141);
+}
 
 
+/*__________RAD 1_________________________*/
 .dag-1{
     grid-area:dag-1;
     background-color: #e69474;
+    margin-top: 2em;
+    padding-top: 2em;
+    text-align: center;
+    
 }
+
 .row1 {
     grid-area: row1;
     background-color: #e69474; 
+    
 }
-
-  
 
 .mobil{
     width: 100%;
@@ -139,19 +123,16 @@ body {
     
 }
 
-
-
-/*___________________________________*/
+/*_________RAD 2__________________________*/
 .dag-2{
     grid-area:dag-2;
     background-color: #8b5abc; 
+    text-align: center;
 }
 .row2{
     grid-area: row2;
     background-color:#8b5abc; 
 }
-
-
 
 .dator, .vr{
     width: 100%;
@@ -159,23 +140,17 @@ body {
     object-fit: cover;
 }
 
-
-
-
-
-
-/*___________________________________*/
+/*_________RAD 3__________________________*/
 
 .dag-3{
     grid-area:dag-3;
     background-color: #ec98b5;
+    text-align: center;
 }
 .row3{
     grid-area: row3;
     background-color: #ec98b5; 
 }
-
-
 
 .mobil-kamera{
     width: 100%;

@@ -1,12 +1,12 @@
 
 
 body {
+    background-color: whitesmoke;
     padding: 0;
     margin: 0;
 }
 * {
     font-family: monospace;
-    font-size: 18px;
     line-height: 1.5em;
     box-sizing: border-box;
 }
@@ -30,29 +30,31 @@ body {
     padding: 20px;
     text-align: center;
 }
-.header > h1{
-    font-size: 30px;
-}
 
 
 /*____________NAV MENY_______________________*/
 .nav-menu {
     position: fixed;
     top: 0; right: 0; left: 0;
-    background-color: whitesmoke;
+    background-color: #d4e9f7; 
     width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: row; 
     padding: 10px;
+    justify-content: center;
 }
 
 .nav-menu a {
     box-sizing: border-box;
     color: black;
+    background-color: whitesmoke;
     text-decoration: none;
+    border-radius: 5%;
     font-size: 25px;
     padding: 5px 5px;
+    margin: 0.3em;
     
+   
 }
 
 .nav-menu a:hover {
@@ -63,13 +65,14 @@ body {
 /*____________WELCOME_______________________*/
 .welcome {
     grid-area: welcome;
-    background-color: #efc9ba; 
+    background-color: whitesmoke; 
     padding: 20px;
     text-align: center;
+    margin-top: 1em;
+    font-size: 16px;
 }
-.welcome-text {
-    padding-top: 5em;
-}
+
+
 
 
 /*_____________VARFÖR DELTA______________________*/
@@ -77,9 +80,6 @@ body {
     grid-area: varför-delta;
     background-color: #e69474;
     text-align: center;
-}
-
-.varför-delta > h1 {
     font-size: 20px;
 }
 
@@ -94,12 +94,13 @@ body {
 }
 
 .item {
-    width: 500px; /* Bredden på varje seminariumscontainer */
+    width: 500px;
     padding: 20px;
     background-color: #f0f0f0;
     border-radius: 5%;
     text-align: center;
-    margin: 10px; /* Mellanrum mellan seminariumscontainers */
+    margin: 10px;
+    font-size: 17px;
 }
 
 .mobil {
@@ -115,6 +116,9 @@ body {
         font-size: 28px;
     
     }
+    .welcome {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -123,7 +127,11 @@ body {
     }
 
     .item {
-        width: calc(100% - 40px); /* Bredden är 100% - 40px av respektive "row" */
+        width: calc(100% - 40px); 
+    }
+    .varför-delta > h1 {
+        font-size: 28px;
+    
     }
 }
 
