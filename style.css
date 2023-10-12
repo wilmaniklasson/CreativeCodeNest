@@ -1,37 +1,41 @@
-/* Grundstilar för mobila enheter */
-* {
-    font-family:  monospace;
-    
-}
+
 
 body {
-    background-color:whitesmoke ;
     padding: 0;
     margin: 0;
-
 }
-  p {
-    line-height: 1.5;
-  }  
+* {
+    font-family: monospace;
+    font-size: 18px;
+    line-height: 1.5em;
+    box-sizing: border-box;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr; 
     grid-template-areas:
         "header"
-        "bättre-webb"
-        "right-content"
-        "left-content";
-    height: 100vh; 
-
+        "welcome"
+        "varför-delta"
+        "row";
+    min-height: 100vh; 
 }
 
+
+/*___________HEADER_______________*/
 .header {
     grid-area: header;
-    background-color:#e69474; 
-    color: black;
+    background-color: #d4e9f7; 
     padding: 20px;
     text-align: center;
 }
+.header > h1{
+    font-size: 30px;
+}
+
+
+/*____________NAV MENY_______________________*/
 .nav-menu {
     position: fixed;
     top: 0; right: 0; left: 0;
@@ -51,112 +55,81 @@ body {
     
 }
 
-.nav-menu a:hover{
+.nav-menu a:hover {
     text-decoration: underline rgb(141, 141, 141);
-    
-
 }
 
-.welcome{
-    padding-top: 12em;
-}
 
-.bättre-webb{
-    grid-area: bättre-webb;
-   
-}
-
-.right-content {
-    grid-area: right-content;
-    background-color: #a885af; 
-    color:black;
+/*____________WELCOME_______________________*/
+.welcome {
+    grid-area: welcome;
+    background-color: #efc9ba; 
     padding: 20px;
     text-align: center;
 }
+.welcome-text {
+    padding-top: 5em;
+}
 
-.right-text{
-    font-size: 16px;
-    background-color:#d2c5d4; 
+
+/*_____________VARFÖR DELTA______________________*/
+.varför-delta {
+    grid-area: varför-delta;
+    background-color: #e69474;
+    text-align: center;
+}
+
+.varför-delta > h1 {
+    font-size: 20px;
+}
+
+
+/*_________ROW_____________*/
+.row {
+    grid-area: row;
+    background-color: #e69474; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    width: 500px; /* Bredden på varje seminariumscontainer */
+    padding: 20px;
+    background-color: #f0f0f0;
     border-radius: 5%;
-    padding: 1em;
-}
-
-.left-content{
-    grid-area: left-content;
-    background-color:#a885af; 
-    color: black;
-    padding: 20px;
     text-align: center;
+    margin: 10px; /* Mellanrum mellan seminariumscontainers */
+}
+
+.mobil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
-.left-content > .gif {
-    height: 300px;
-    width: 300px;
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-.left-content > .image {
-    height: 280px;
-    width: 300px;
-}
-
-/* Mediafråga för tabletter (minst 768px bred) */
-@media (min-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "header header"
-            "bättre-webb bättre-webb"
-            "right-content left-content"
-            ;
-    }
-    .nav-menu  {
-            flex-direction: row; 
-            justify-content: center; 
-        }
+/*___________MEDIA QERIS__________________*/
+@media screen and (min-width: 768px) {
+    .varför-delta > h1 {
+        font-size: 28px;
     
-        .nav-menu a {
-            margin: 0 15px; 
-        }
-
-        .welcome{
-            padding-top: 5em;
-            font-size: 25px;
-        }
-        .right-text{
-            min-width: 400px; 
-            
-           
-        }
-}
-
-
-
-
-
-/* Mediafråga för större skärmar (minst 1024px bred) */
-@media (min-width: 1024px) {
-    .left-content > .gif {
-        height: 500px;
-        width: 500px;
-        
-    }
-    .left-content > .image{
-        height: 480px;
-        width: 500px;
-        
-    }
-    .left-content > h3{
-        margin: 1em;
-        padding: 3em;
-       
-    }
-
-    .right-text{
-        max-width: 700px; 
-        margin-left: 5em;
-        font-size: 18px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .item {
+        width: calc(100% - 40px); /* Bredden är 100% - 40px av respektive "row" */
+    }
+}
+
+/*___________________________*/
+
+
+
+
+
