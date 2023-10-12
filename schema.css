@@ -92,12 +92,20 @@ p {
     border-radius: 5%;
     font-size: 25px;
     padding: 5px 5px;
-    margin: 0.3em;   
+    margin: 0.3em;
+    position: relative;
+    box-shadow: 0.2em 0.3em 0.4em -0.1em rgb(80, 80, 80);
+	transition: all 0.4s;
+    
+   
 }
 
 .nav-menu a:hover {
-    text-decoration: underline rgb(141, 141, 141);
+    box-shadow: 0.3em 0.45em 0.6em -0.1em rgb(80, 80, 80);
+	top: -0.3em;
+	background-color: rgb(229, 234, 242);
 }
+
 
 
 /*__________RAD 1_________________________*/
