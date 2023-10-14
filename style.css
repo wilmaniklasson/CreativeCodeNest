@@ -65,15 +65,35 @@ body {
 
 
 /*____________WELCOME_______________________*/
+
 .welcome {
     grid-area: welcome;
     background-color: whitesmoke; 
+    font-family: 'Courier New', monospace;
     padding: 20px;
+    margin-top: 2em;
     text-align: center;
-    margin-top: 1em;
-    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%; 
 }
 
+.welcome-text {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: animateCode 3s steps(40);
+}
+
+
+
+@keyframes animateCode {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
 
 
 
