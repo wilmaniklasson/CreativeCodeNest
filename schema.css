@@ -19,13 +19,9 @@ p {
     grid-template-columns: 1fr; 
     grid-template-areas:
         "header"
-        "dag-1"
         "row1"
-        "dag-2"
         "row2"
-        "dag-3"
-        "row3"
-        "footer";
+        "row3";
     min-height: 100vh; 
 }
 
@@ -54,14 +50,10 @@ p {
 
     .seminarium-dag-1, .seminarium-dag-2, .seminarium-dag-3 {
         width: calc(100% - 40px);
+        align-self: center;
     }
 }
 
-@media screen and (mix-width: 768px) {
-    .dag-1, .dag-2, .dag-3{
-        
-    }
-}
 
 /*_____HEADER_______________*/
 .header {
@@ -95,9 +87,7 @@ p {
     margin: 0.3em;
     position: relative;
     box-shadow: 0.2em 0.3em 0.4em -0.1em rgb(80, 80, 80);
-	transition: all 0.4s;
-    
-   
+	transition: all 0.4s;   
 }
 
 .nav-menu a:hover {
@@ -115,6 +105,7 @@ p {
     margin-top: 2em;
     padding-top: 2em;
     text-align: center;
+    width: 100vw;
     
 }
 
@@ -136,6 +127,7 @@ p {
     grid-area:dag-2;
     background-color: #8b5abc; 
     text-align: center;
+    width: 100vw;
 }
 .row2{
     grid-area: row2;
@@ -154,6 +146,7 @@ p {
     grid-area:dag-3;
     background-color: #ec98b5;
     text-align: center;
+    width: 100vw;
 }
 .row3{
     grid-area: row3;

@@ -9,73 +9,76 @@
 </head>
 <body>
     <header>
-        <div class="nav-menu">
+        <nav class="nav-menu">
             <a href="index.html">Tillbaka</a>
             <a href="schema.html">Seminarium</a>
-        </div>
+        </nav>
     </header>
 
     <main>
         <form>
             <h1>Anmäl dig här!</h1>
-            <div class="form-section">
+            <div>
                 <label for="form-firstname">Förnamn:</label>
                 <input type="text" name="form-firstname" id="form-firstname" placeholder="Förnamn" required minlength="2" maxlength="18">
             </div>
-            <div class="form-section">
+
+            <div>
                 <label for="form-lastname">Efternamn:</label>
                 <input type="text" name="form-lastname" id="form-lastname" placeholder="Efternamn" required minlength="2" maxlength="18">
             </div>
-            <div class="form-section">
+
+            <div>
                 <label for="form-epost">E-postadress:</label>
                 <input type="email" name="form-epost" id="form-epost" placeholder="E-postadress" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             </div>
-            <div class="form-section">
+
+            <div">
                 <label for="form-address">Adress:</label>
                 <textarea name="form-address" id="form-address" cols="45" rows="5" placeholder="Adress" required ></textarea>
-            </div>            
-            <div class="form-section">
+            </div> 
+
+            <div>
                 <h2>Välj seminariedagar:</h2>
-                <div>
-                    <p>20 oktober</p>
-                    <input id="dag-1" type="checkbox" name="seminar-dag[]">
-                    <label for="dag-1">"Framtidens Frontend-Teknologier"</label>
-                </div>
-                <div>
-                    <p>21 oktober</p>
-                    <input id="dag-2" type="checkbox" name="seminar-dag[]">
-                    <label for="dag-2">"Optimerad Prestanda och Responsiv Design"</label>
-                </div>
-                <div>
-                    <p>23 oktober</p>
-                    <input id="dag-3" type="checkbox" name="seminar-dag[]">
-                    <label for="dag-3">"Säkerhet, Användardata och Framtidstrender"</label>
-                </div>
+                <p>20 oktober</p>
+                <input id="dag-1" type="checkbox" name="seminar-dag[]">
+                <label for="dag-1">"Framtidens Frontend-Teknologier"</label>
             </div>
-            <div class="form-section">
+            <div>
+                <p>21 oktober</p>
+                <input id="dag-2" type="checkbox" name="seminar-dag[]">
+                <label for="dag-2">"Optimerad Prestanda och Responsiv Design"</label>
+            </div>
+
+            <div>
+                <p>23 oktober</p>
+                <input id="dag-3" type="checkbox" name="seminar-dag[]">
+                <label for="dag-3">"Säkerhet, Användardata och Framtidstrender"</label>
+            </div>
+
+            <div>
                 <h2>Välj mat:</h2>
-                <div>
-                    <input id="kött" type="radio" name="mat-typ" value="kött">
-                    <label for="kött">Kött</label>
-                </div>
-                <div>
-                    <input id="Veganskt" type="radio" name="mat-typ" value="veganskt">
-                    <label for="Veganskt">Veganskt</label>
-                </div>
-                <div>
-                    <input id="Övrigt" type="radio" name="mat-typ" value="allergi">
-                    <label for="Övrigt">Allergi (vänligen specificera i rutan nedan)</label>
-                    <textarea name="allergi-och-restriktioner" id="meddelande" cols="45" rows="5" placeholder="(Har några allergier eller speciella kostrestriktioner.)"></textarea>
-                </div>
+                <input id="kött" type="radio" name="mat-typ" value="kött">
+                <label for="kött">Kött</label>
             </div>
-            <div class="form-section row">
+
+            <div>
+                <input id="Veganskt" type="radio" name="mat-typ" value="veganskt">
+                <label for="Veganskt">Veganskt</label>
+            </div>
+
+            <div>
+                <input id="Övrigt" type="radio" name="mat-typ" value="allergi">
+                <label for="Övrigt">Allergi (vänligen specificera i rutan nedan)</label>
+                <textarea name="allergi-och-restriktioner" id="meddelande" cols="45" rows="5" 
+                placeholder="(Har några allergier eller speciella kostrestriktioner.)">
+                </textarea>
+            </div>
+
+            <div>
                 <input type="submit" value="Spara inställningar">
             </div>
         </form>
     </main>
-
-    <footer>
-      
-    </footer>
 </body>
 </html>
