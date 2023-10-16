@@ -21,7 +21,8 @@ p {
         "header"
         "dag-1"
         "dag-2"
-        "dag-3";
+        "dag-3"
+        "footer";
     min-height: 100vh; 
 }
 
@@ -88,7 +89,7 @@ p {
     
 
 
-/*_____HEADER_______________*/
+/*HEADER*/
 .main-header {
     grid-area: header;
     background-color: #d4e9f7; 
@@ -96,12 +97,11 @@ p {
     text-align: center;
 }
 
-/*________NAV MENY______________*/
-
-.site-nav {
+/* NAV MENU */
+.nav-menu {
     position: fixed;
     top: 0; right: 0; left: 0;
-    background-color: #d4e9f7; 
+    background-color: #3d3d3d;
     width: 100%;
     display: flex;
     flex-direction: row; 
@@ -109,7 +109,7 @@ p {
     justify-content: center;
 }
 
-.site-nav a {
+.nav-menu a {
     box-sizing: border-box;
     color: black;
     background-color: whitesmoke;
@@ -119,19 +119,17 @@ p {
     padding: 5px 5px;
     margin: 0.3em;
     position: relative;
-    box-shadow: 0.2em 0.3em 0.4em -0.1em rgb(80, 80, 80);
-	transition: all 0.4s;   
+	transition: all 0.4s;  
 }
 
-.site-nav a:hover {
-    box-shadow: 0.3em 0.45em 0.6em -0.1em rgb(80, 80, 80);
-	top: -0.3em;
-	background-color: rgb(229, 234, 242);
+.nav-menu a:hover {
+	top: -0.2em;
+    background-color: rgb(199, 196, 196);
 }
 
 
 
-/*__________RAD 1_________________________*/
+/*RAD 1*/
 .row-1 {
    
     margin-top: 2em;
@@ -149,7 +147,7 @@ p {
 
 
 
-/*_________RAD 2__________________________*/
+/*RAD 2*/
 .row-2{
     text-align: center;
     width: 100%;
@@ -160,7 +158,7 @@ p {
 }
 
 
-/*_________RAD 3__________________________*/
+/*RAD 3*/
 
 .row-3 {
     text-align: center;
@@ -171,3 +169,41 @@ p {
     background-color: #edb2c7; 
 }
 
+/*FOOTER*/
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+.contact-info a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+.contact-info a:hover {
+    color: #5468ec;
+}
+
+.social-icons {
+    background-color: whitesmoke;
+    padding: 1em
+}
+
+
+a img {
+    width: 50px; 
+    height: 50px;
+    margin: 0.5em;
+    transition: 0.3s; 
+}
+
+a:hover img {
+    transform: scale(1.2); 
+}

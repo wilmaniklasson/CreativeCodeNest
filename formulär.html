@@ -16,48 +16,70 @@
     </header>
 
     <main>
-        <form id="anmälningsformulär" aria-labelledby="formrubrik">
+        <form action="formsvar.html" id="anmälningsformulär" aria-labelledby="formrubrik">
             <h1 id="formrubrik">Anmäl dig här!</h1>
+
             <div>
                 <label for="form-firstname">Förnamn:</label>
-                <input type="text" name="form-firstname" id="form-firstname" placeholder="Förnamn" required minlength="2" maxlength="18" title="Vänligen ange ditt förnamn (minst 2 tecken)">
+                <input type="text" 
+                name="form-firstname" 
+                id="form-firstname" 
+                placeholder="Förnamn" 
+                required minlength="2" maxlength="18" 
+                title="Vänligen ange ditt förnamn (minst 2 tecken)">
             </div>
 
             <div>
                 <label for="form-lastname">Efternamn:</label>
-                <input type="text" name="form-lastname" id="form-lastname" placeholder="Efternamn" required minlength="2" maxlength="18">
+                <input type="text" 
+                name="form-lastname" 
+                id="form-lastname" 
+                placeholder="Efternamn" 
+                required minlength="2" maxlength="18">
             </div>
 
             <div>
                 <label for="form-epost">E-postadress:</label>
-                <input type="email" name="form-epost" id="form-epost" placeholder="E-postadress" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-            </div>
-
-            <div">
-                <label for="form-address">Adress:</label>
-                <textarea name="form-address" id="form-address" cols="45" rows="5" placeholder="Adress" required ></textarea>
-            </div> 
-
-            <div>
-                <h2>Välj seminariedagar:</h2>
-                <p>20 oktober</p>
-                <input id="dag-1" type="checkbox" name="seminar-dag[]">
-                <label for="dag-1">"Framtidens Frontend-Teknologier"</label>
-            </div>
-            <div>
-                <p>21 oktober</p>
-                <input id="dag-2" type="checkbox" name="seminar-dag[]">
-                <label for="dag-2">"Optimerad Prestanda och Responsiv Design"</label>
+                <input type="email" 
+                    name="form-epost" 
+                    id="form-epost" 
+                    placeholder="E-postadress" 
+                    required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             </div>
 
             <div>
-                <p>23 oktober</p>
-                <input id="dag-3" type="checkbox" name="seminar-dag[]">
-                <label for="dag-3">"Säkerhet, Användardata och Framtidstrender"</label>
+                <label for="address">Adress:</label>
+                <input type="text" 
+                    id="address" 
+                    name="address" 
+                    placeholder="Ange din adress här" 
+                    required
+                    title="Vänligen ange en giltig adress (endast bokstäver, siffror och mellanslag)">
             </div>
-            <br>
             
-            <div>
+            
+
+          <br>
+          <div class="seminariedagar">
+            <input id="dag-1" type="checkbox" name="seminar-dag[]">
+            <label for="dag-1">Fredag</label><br>
+            <span class="seminar-description">"Framtidens Frontend-Teknologier"</span>
+        </div>
+        
+        <div class="seminariedagar">
+            <input id="dag-2" type="checkbox" name="seminar-dag[]">
+            <label for="dag-2">Lördag</label> <br>
+            <span class="seminar-description">"Optimerad Prestanda och Responsiv Design"</span>
+        </div>
+        
+        <div class="seminariedagar">
+            <input id="dag-3" type="checkbox" name="seminar-dag[]">
+            <label for="dag-3">Söndag</label> <br>
+            <span class="seminar-description">"Säkerhet, Användardata och Framtidstrender"</span>
+        </div>
+           
+            
+            <div class="välj-mat">
                 <label for="mat">Välj mat:</label>
                 <select id="mat" aria-label="Vänligen välj önskad mattyp">
                     <option value="ingen-mat">Ingen mat</option>
@@ -67,19 +89,41 @@
                 </select>
             </div>
 
-            <div>
-                <input id="Övrigt" type="radio" name="mat-typ" value="allergi">
-                <label for="Övrigt">Allergi (vänligen specificera i rutan nedan)</label>
+            <div class="text">
+                <label for="allergi-och-restriktioner">Allergi (vänligen specificera i rutan nedan)</label>
                 <textarea name="allergi-och-restriktioner" id="meddelande" cols="45" rows="5" 
-                placeholder="(Har några allergier eller speciella kostrestriktioner.)">
-                </textarea>
+                placeholder="(Har några allergier eller speciella kostrestriktioner.)"></textarea>
             </div>
-
+            
             <div>
                 <input type="submit" value="Spara inställningar"></label>
                 <button type="reset">Ångra</button>
             </div>
         </form>
     </main>
+    <footer class="footer-container">
+        <div class="contact-info">
+            <a href="kontakt.html" target="_blank">Kontaktformulär</a>
+            <a href="mailto:info@bättre-webb.se" class="mail-button">Mejl</a>
+            <p>Telefon: 123-456-789</p>
+        </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/example" target="_blank">
+                    <img src="img/square-facebook.svg" alt="Facebook Icon">
+                </a>
+                
+                <a href="https://twitter.com/example" target="_blank">
+                    <img src="img/square-twitter.svg" alt="Twitter Icon">
+                </a>
+                
+                <a href="https://www.instagram.com/example" target="_blank">
+                    <img src="img/square-instagram.svg" alt="Instagram Icon">
+                </a>
+                
+                <a href="https://www.linkedin.com/company/example" target="_blank">
+                    <img src="img/linkedin.svg" alt="LinkedIn Icon">
+                </a>
+            </div>
+    </footer>
 </body>
 </html>
