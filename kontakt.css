@@ -25,7 +25,7 @@ textarea {
     display: block;
     margin-bottom: 15px;
     width: 100%;
-    box-sizing: border-box; /* Lägg till denna regel för att inkludera padding och gränser i elementets totala bredd och höjd */
+    box-sizing: border-box; 
 }
 
 input,
@@ -34,7 +34,7 @@ textarea {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Lägg till denna regel här också */
+    box-sizing: border-box; 
 }
 
 input[type="submit"] {

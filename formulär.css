@@ -163,6 +163,10 @@ footer {
     padding: 1em
 }
 
+a {
+    text-decoration: none;
+}
+
 
 a img {
     width: 50px; 
