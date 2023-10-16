@@ -105,7 +105,7 @@ p {
     margin-top: 2em;
     padding-top: 2em;
     text-align: center;
-    width: 100vw;
+    width: 100%;
     
 }
 
@@ -127,7 +127,7 @@ p {
     grid-area:dag-2;
     background-color: #8b5abc; 
     text-align: center;
-    width: 100vw;
+    width: 100%;
 }
 .row2{
     grid-area: row2;
@@ -146,7 +146,7 @@ p {
     grid-area:dag-3;
     background-color: #ec98b5;
     text-align: center;
-    width: 100vw;
+    width: 100%;
 }
 .row3{
     grid-area: row3;
