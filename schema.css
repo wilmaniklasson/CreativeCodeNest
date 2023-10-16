@@ -19,44 +19,77 @@ p {
     grid-template-columns: 1fr; 
     grid-template-areas:
         "header"
-        "row1"
-        "row2"
-        "row3";
+        "dag-1"
+        "dag-2"
+        "dag-3";
     min-height: 100vh; 
 }
 
 /*_____GEMENSMMA STILAR____________*/
 
-.row1, .row2, .row3 {
+.dag-1, .dag-2, .dag-3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.seminarium-dag-1, .seminarium-dag-2, .seminarium-dag-3 {
+.event-details {
     width: 300px; 
     padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 5%;
+    background-color: whitesmoke;
+    border-radius: 3%;
     text-align: center;
+    margin: 10px;
+    
+}
+
+.event-details-img {
+    width: 300px; 
     margin: 10px; 
 }
 
-
-@media screen and (max-width: 768px) {
-    .row1, .row2, .row3 {
-        flex-direction: column;
-    }
-
-    .seminarium-dag-1, .seminarium-dag-2, .seminarium-dag-3 {
-        width: calc(100% - 40px);
-        align-self: center;
-    }
+.mobil, .mobil-kamera, .dator, .vr {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3%;
+    
 }
 
 
+@media screen and (max-width: 768px) {  
+    .dag-1, .dag-2, .dag-3 {
+        flex-direction: column;
+    }
+
+    .event-details {
+        width: calc(100% - 40px);
+        align-self: center;
+    }
+    .event-details-img {
+        max-width: 500px;
+        align-self: center;
+    }
+    
+}
+@media screen and (min-width: 1200px) {  
+    
+    .event-details, .event-details-img {
+        min-width: 400px;
+    }
+}
+
+@media screen and (min-width: 1599px) {  
+
+    .event-details, .event-details-img {
+        min-width: 300px;
+    }
+}
+    
+
+
 /*_____HEADER_______________*/
-.header {
+.main-header {
     grid-area: header;
     background-color: #d4e9f7; 
     padding: 20px;
@@ -65,7 +98,7 @@ p {
 
 /*________NAV MENY______________*/
 
-.nav-menu {
+.site-nav {
     position: fixed;
     top: 0; right: 0; left: 0;
     background-color: #d4e9f7; 
@@ -76,7 +109,7 @@ p {
     justify-content: center;
 }
 
-.nav-menu a {
+.site-nav a {
     box-sizing: border-box;
     color: black;
     background-color: whitesmoke;
@@ -90,7 +123,7 @@ p {
 	transition: all 0.4s;   
 }
 
-.nav-menu a:hover {
+.site-nav a:hover {
     box-shadow: 0.3em 0.45em 0.6em -0.1em rgb(80, 80, 80);
 	top: -0.3em;
 	background-color: rgb(229, 234, 242);
@@ -99,9 +132,8 @@ p {
 
 
 /*__________RAD 1_________________________*/
-.dag-1{
-    grid-area:dag-1;
-    background-color: #e69474;
+.row-1 {
+   
     margin-top: 2em;
     padding-top: 2em;
     text-align: center;
@@ -109,53 +141,33 @@ p {
     
 }
 
-.row1 {
-    grid-area: row1;
-    background-color: #e69474; 
+.dag-1{
+    grid-area: dag-1;
+    background-color: #e49e83; 
     
 }
 
-.mobil{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
-}
+
 
 /*_________RAD 2__________________________*/
-.dag-2{
-    grid-area:dag-2;
-    background-color: #8b5abc; 
+.row-2{
     text-align: center;
     width: 100%;
 }
-.row2{
-    grid-area: row2;
-    background-color:#8b5abc; 
+.dag-2{
+    grid-area: dag-2;
+    background-color:#b28ed6; 
 }
 
-.dator, .vr{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 /*_________RAD 3__________________________*/
 
-.dag-3{
-    grid-area:dag-3;
-    background-color: #ec98b5;
+.row-3 {
     text-align: center;
     width: 100%;
 }
-.row3{
-    grid-area: row3;
-    background-color: #ec98b5; 
+.dag-3{
+    grid-area: dag-3;
+    background-color: #edb2c7; 
 }
 
-.mobil-kamera{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-   
