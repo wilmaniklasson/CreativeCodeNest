@@ -10,17 +10,17 @@
 <body>
     <header>
         <nav class="nav-menu">
-            <a href="index.html">Tillbaka</a>
-            <a href="schema.html">Seminarium</a>
+            <a href="index.html" aria-label="Tillbaka till startsidan">Tillbaka</a>
+            <a href="schema.html" aria-label="Gå till schemat för seminariet">Seminarium</a>
         </nav>
     </header>
 
     <main>
-        <form>
-            <h1>Anmäl dig här!</h1>
+        <form id="anmälningsformulär" aria-labelledby="formrubrik">
+            <h1 id="formrubrik">Anmäl dig här!</h1>
             <div>
                 <label for="form-firstname">Förnamn:</label>
-                <input type="text" name="form-firstname" id="form-firstname" placeholder="Förnamn" required minlength="2" maxlength="18">
+                <input type="text" name="form-firstname" id="form-firstname" placeholder="Förnamn" required minlength="2" maxlength="18" title="Vänligen ange ditt förnamn (minst 2 tecken)">
             </div>
 
             <div>
@@ -55,16 +55,16 @@
                 <input id="dag-3" type="checkbox" name="seminar-dag[]">
                 <label for="dag-3">"Säkerhet, Användardata och Framtidstrender"</label>
             </div>
-
+            <br>
+            
             <div>
-                <h2>Välj mat:</h2>
-                <input id="kött" type="radio" name="mat-typ" value="kött">
-                <label for="kött">Kött</label>
-            </div>
-
-            <div>
-                <input id="Veganskt" type="radio" name="mat-typ" value="veganskt">
-                <label for="Veganskt">Veganskt</label>
+                <label for="mat">Välj mat:</label>
+                <select id="mat" aria-label="Vänligen välj önskad mattyp">
+                    <option value="ingen-mat">Ingen mat</option>
+                    <option value="kött">Kött</option>
+                    <option value="fisk">Fisk</option>
+                    <option value="vegan">Vegan</option>
+                </select>
             </div>
 
             <div>
@@ -76,7 +76,8 @@
             </div>
 
             <div>
-                <input type="submit" value="Spara inställningar">
+                <input type="submit" value="Spara inställningar"></label>
+                <button type="reset">Ångra</button>
             </div>
         </form>
     </main>
