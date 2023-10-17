@@ -129,6 +129,10 @@ main {
         font-size: 17px;
     }
 
+    input[type="submit"]:hover{
+        background-color: #398b3e;
+    }
+
     button[type="reset"] {
         background-color: #858885;
         color: white;
@@ -137,11 +141,11 @@ main {
         border-radius: 5px;
         font-size: 17px;
     }
-
-    input[type="submit"]:hover,
     button[type="reset"]:hover {
-        background-color: #398b3e;
+        background-color: #535553;
     }
+
+   
     
 
    
