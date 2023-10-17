@@ -80,6 +80,7 @@ main {
         border-radius: 5px;
         box-sizing: border-box;
         font-size: 18px;
+        resize: none;
     }
      
     select[id="mat"]{
