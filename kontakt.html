@@ -10,15 +10,16 @@
     <h1>Kontaktformulär</h1>
     <form action="#" method="post">
         <label for="namn">Namn:</label>
-        <input type="text" id="namn" name="namn" required><br><br>
+        <input type="text" id="namn" name="namn" required aria-label="Fält för ditt namn"><br><br>
 
         <label for="email">E-post:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <input type="email" id="email" name="email" required aria-label="Fält för din e-postadress"><br><br>
 
         <label for="meddelande">Meddelande:</label><br>
-        <textarea id="meddelande" name="meddelande" rows="4" cols="50" required></textarea><br><br>
+        <textarea id="meddelande" name="meddelande" rows="4" cols="50" required aria-label="Fält för ditt meddelande"></textarea><br><br>
 
-        <input type="submit" value="Skicka">
+        <input type="submit" value="Skicka" aria-label="Skicka formuläret">
     </form>
 </body>
 </html>
+
