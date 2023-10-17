@@ -180,16 +180,22 @@ footer {
 .contact-info {
     margin-bottom: 20px;
 }
+
+
+
 .contact-info a {
     display: inline-block;
     margin: 0 10px;
-    color: #fff;
+    color: #e8e9ee; 
     font-size: 24px;
-    transition: color 0.3s ease;
+    
 }
+
 .contact-info a:hover {
-    color: #5468ec;
+    text-decoration: underline; 
+    transform: scale(1.1); 
 }
+
 
 .social-icons {
     background-color: whitesmoke;
