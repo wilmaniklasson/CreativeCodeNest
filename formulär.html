@@ -19,6 +19,8 @@
         <form action="formsvar.html" id="anmälningsformulär" aria-labelledby="formrubrik">
             <h1 id="formrubrik">Anmäl dig här!</h1>
 
+        <section class="type-text">
+            <h2>Personlig information</h2>
             <div>
                 <label for="form-firstname">Förnamn:</label>
                 <input type="text" 
@@ -46,33 +48,34 @@
                     placeholder="E-postadress" 
                     required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             </div>
-
+   
             <div>
                 <label for="address">Adress:</label>
                 <input type="text" id="address" name="address" placeholder="Ange din adress här" required title="Vänligen ange en giltig adress (endast bokstäver, siffror och mellanslag)">
             </div>
-            
+        </section> <br>
 
-          <br>
-          <div class="seminariedagar">
-            <input id="dag-1" type="checkbox" name="seminar-dag[]">
-            <label for="dag-1">Fredag</label><br>
-            <span class="seminar-description">"Framtidens Frontend-Teknologier"</span>
-        </div>
-        
-        <div class="seminariedagar">
-            <input id="dag-2" type="checkbox" name="seminar-dag[]">
-            <label for="dag-2">Lördag</label> <br>
-            <span class="seminar-description">"Optimerad Prestanda och Responsiv Design"</span>
-        </div>
-        
-        <div class="seminariedagar">
-            <input id="dag-3" type="checkbox" name="seminar-dag[]">
-            <label for="dag-3">Söndag</label> <br>
-            <span class="seminar-description">"Säkerhet, Användardata och Framtidstrender"</span>
-        </div>
-           
+        <section class="Seminarium">
+            <h2>Välj seminariedagar</h2>
             
+            <div class="seminariedagar">
+                <input id="dag-1" type="checkbox" name="seminar-dag[]">
+                <label for="dag-1">Fredag: Framtidens Frontend-Teknologier</label><br>
+            </div>
+            
+            <div class="seminariedagar">
+                <input id="dag-2" type="checkbox" name="seminar-dag[]">
+                <label for="dag-2">Lördag: Optimerad Prestanda och Responsiv Design</label> <br>
+            </div>
+            
+            <div class="seminariedagar">
+                <input id="dag-3" type="checkbox" name="seminar-dag[]">
+                <label for="dag-3">Söndag: Säkerhet, Användardata och Framtidstrender</label> <br>
+            </div>
+        </section>  
+            
+        <section class="mat">
+            <h2>Välj matpreferenser och allergier</h2>
             <div class="välj-mat">
                 <label for="mat">Välj mat:</label>
                 <select id="mat" aria-label="Vänligen välj önskad mattyp">
@@ -87,11 +90,16 @@
                 <label for="meddelande">Allergi:</label>
                 <textarea name="allergi-och-restriktioner" id="meddelande" cols="45" rows="5" placeholder="(Har några allergier eller speciella kostrestriktioner.)"></textarea>
             </div>
+        </section>
             
+        <section class="knappar">
+            <h2>Skicka formulär</h2>
             <div>
                 <input type="submit" value="Spara inställningar">
-                <button type="reset">Ångra</button>
+                <button type="reset">Avbryt</button>
             </div>
+        </section>
+
         </form>
     </main>
     <footer class="footer-container">
